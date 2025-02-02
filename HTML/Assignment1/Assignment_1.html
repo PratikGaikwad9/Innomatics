@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: burlywood;">
+    
+    <header>
+      <h1 align="center" style="color: brown ;">Personal Budget Tracker</h1>
+
+            <nav align="center">
+              <a href="#">Home</a> &nbsp;<a href="#">Add Expenses</a> &nbsp;<a href="#">View Budget</a>  <!&nbsp; for creating space
+             </nav>
+    </header>
+    <section >
+        <h2 align="center" style="color: aqua;">Welcome To the Budjet Tracker</h2>
+        <p align="center" >It can help us to identify areas where you are overspending or under-spending, allowing us to adjust our budgets accordingly.</p>
+    </section>
+    <section>
+        <h2 align="center" style="color: aqua;"> Add Income / Expenses</h2>
+        <form align="center">
+            
+                <lable for="Amount">Amount:</lable> <input type="text" required><br
+                <br
+                <label for="Type">Type:</label>  
+                <select style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"      id="Type">
+                      <option for="Income">Income</option>
+                      <option for="Expense"> Expense</option>
+                </select><br
+            
+                <label for="Category">Category:</label> 
+                <select style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+                    <option for="Food">Food</option>
+                    <option for="Clothes">Clothes</option>
+                    <option for="Entertainment">Entertainment</option>
+                    <option for="Shoes">Shoes</option>
+                    <option for="Petrol">Petrol</option>
+                    <option for="Travelling">Travelling</option>
+                    <option for="Parties">Parties</option>
+                </select><br
+                
+                <label for="Date">Date:</label> <input type="date" required> <br
+                
+                <div>
+                    <button>Submit</button>
+                </div>
+                </form> 
+    </section>
+    <section>
+        <table align="center" border="2">
+            <thead>
+                <tr>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Type</th>
+            </thead>
+        </tr>
+            <tbody>
+                <tr>
+                    <td>Salary</td>
+                    <td>70000</td>
+                    <td>01-06-2025</td>
+                    <td>Income</td>
+                </tr>
+                <tr>
+                    <td>Traveling Expenses</td>
+                    <td>3000</td>
+                    <td>01-07-2025</td>
+                    <td>Expense</td>
+                </tr>
+                <tr>
+                    <td>Food And Rent</td>
+                    <td>7000</td>
+                    <td>01-08-2025</td>
+                    <td>Expense</td>
+                </tr>
+                <tr>
+                    <td>Gym</td>
+                    <td>1500</td>
+                    <td>15-08-2025</td>
+                    <td>Expense</td>
+                </tr>
+                <tr>
+                    <td>Free Lancing</td>
+                    <td>5000</td>
+                    <td>28-09-2025</td>
+                    <td>Income</td>
+                </tr>
+                <tr>
+                    <td>Other</td>
+                    <td>5000</td>
+                    <td>12-09-2025</td>
+                    <td>Expense</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <footer align="center">
+        <p>Personal Budget Tracker - Version 2.0</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+    </footer>
+</body>
+</html>
