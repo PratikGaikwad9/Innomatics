@@ -3,104 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shopping Cart</title>
+    <link rel="icon" href="Images/icon.png">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body style="background-color: burlywood;">
-    
+<body>
     <header>
-      <h1 align="center" style="color: brown ;">Personal Budget Tracker</h1>
-
-            <nav align="center">
-              <a href="#">Home</a> &nbsp;<a href="#">Add Expenses</a> &nbsp;<a href="#">View Budget</a>  <!&nbsp; for creating space
-             </nav>
+        <nav>
+            <h1>Shopping Cart</h1>
+            <ul>
+                <li><a href="#" onclick="filterCategory('all')">All</a></li>
+                <li><a href="#" onclick="filterCategory('mobiles')">Mobiles</a></li>
+                <li><a href="#" onclick="filterCategory('laptops')">Laptops</a></li>
+                <li><a href="#" onclick="filterCategory('accessories')">Accessories</a></li>
+                <li class="cart-icon" onclick="toggleCart()">
+                    🛒<sup id="cart-count">0</sup>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <section >
-        <h2 align="center" style="color: aqua;">Welcome To the Budjet Tracker</h2>
-        <p align="center" >It can help us to identify areas where you are overspending or under-spending, allowing us to adjust our budgets accordingly.</p>
-    </section>
-    <section>
-        <h2 align="center" style="color: aqua;"> Add Income / Expenses</h2>
-        <form align="center">
-            
-                <lable for="Amount">Amount:</lable> <input type="text" required><br
-                <br
-                <label for="Type">Type:</label>  
-                <select style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"      id="Type">
-                      <option for="Income">Income</option>
-                      <option for="Expense"> Expense</option>
-                </select><br
-            
-                <label for="Category">Category:</label> 
-                <select style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
-                    <option for="Food">Food</option>
-                    <option for="Clothes">Clothes</option>
-                    <option for="Entertainment">Entertainment</option>
-                    <option for="Shoes">Shoes</option>
-                    <option for="Petrol">Petrol</option>
-                    <option for="Travelling">Travelling</option>
-                    <option for="Parties">Parties</option>
-                </select><br
-                
-                <label for="Date">Date:</label> <input type="date" required> <br
-                
-                <div>
-                    <button>Submit</button>
-                </div>
-                </form> 
-    </section>
-    <section>
-        <table align="center" border="2">
-            <thead>
-                <tr>
-            <th>Category</th>
-            <th>Amount</th>
-            <th>Date</th>
-            <th>Type</th>
-            </thead>
-        </tr>
-            <tbody>
-                <tr>
-                    <td>Salary</td>
-                    <td>70000</td>
-                    <td>01-06-2025</td>
-                    <td>Income</td>
-                </tr>
-                <tr>
-                    <td>Traveling Expenses</td>
-                    <td>3000</td>
-                    <td>01-07-2025</td>
-                    <td>Expense</td>
-                </tr>
-                <tr>
-                    <td>Food And Rent</td>
-                    <td>7000</td>
-                    <td>01-08-2025</td>
-                    <td>Expense</td>
-                </tr>
-                <tr>
-                    <td>Gym</td>
-                    <td>1500</td>
-                    <td>15-08-2025</td>
-                    <td>Expense</td>
-                </tr>
-                <tr>
-                    <td>Free Lancing</td>
-                    <td>5000</td>
-                    <td>28-09-2025</td>
-                    <td>Income</td>
-                </tr>
-                <tr>
-                    <td>Other</td>
-                    <td>5000</td>
-                    <td>12-09-2025</td>
-                    <td>Expense</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-    <footer align="center">
-        <p>Personal Budget Tracker - Version 2.0</p>
-        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
-    </footer>
+
+    <main>
+        <section class="products" id="product-list">
+            <!-- 15+ Products will be dynamically inserted here -->
+        </section>
+    </main>
+
+    <div class="cart-panel" id="cart-panel">
+        <h2>Shopping Cart</h2>
+        <button class="close-cart" onclick="toggleCart()">✖</button>
+        <div id="cart-items"></div>
+        <h3>Total: Rs. <span id="cart-total">0</span></h3>
+        <button onclick="clearCart()" class="clear-cart">Empty Cart</button>
+        <button onclick="checkout()" class="checkout-btn">Checkout</button>
+    </div>
+
+
+    <!-- Checkout Modal -->
+<div id="checkoutModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h2>Order Summary</h2>
+        <div id="orderDetails"></div>
+        <p><strong>Total: RS. <span id="orderTotal"></span></strong></p>
+        <button id="confirmOrder">Confirm Order</button>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
